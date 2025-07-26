@@ -1,0 +1,17 @@
+{
+  "name": "usuario/bienesraices",
+  "description": "creando proyecto poo",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Jorge Carmona"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "APP\\": "clases/"
+    }
+  }
+}
+

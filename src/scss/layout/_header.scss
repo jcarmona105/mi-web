@@ -1,0 +1,65 @@
+@use '../base/variables' as variables;
+@use '../base/mixins' as mixins;
+
+.no-webp .inicio {
+  background-image: url(../img/header.jpg);
+}
+
+.webp .inicio {
+  background-image: url(../img/header.webp);
+}
+
+.header {
+  background-color: variables.$gris-oscuro;
+  padding: 1rem 0 2rem 0;
+
+  &.inicio {
+    background-position: center center;
+    background-size: cover;
+    @include mixins.tablet {
+      min-height: 70rem;
+    }
+    .contenido-header{
+        @include mixins.tablet {
+      min-height: 70rem;
+    }
+    }
+  }
+  .contenido-header{
+    display:flex;
+    flex-direction: column; // ✅ con "n"
+
+    justify-content: space-between;
+
+    @include mixins.tablet {
+      min-height: 70rem;
+    }
+  }
+
+  h1 {
+    color: variables.$blanco;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: variables.$bold;
+    line-height: 2;
+    max-width: 60rem;
+
+  
+  }
+}
+
+.navegacion-principal {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+
+  a {
+    color: variables.$blanco;
+    font-size: 2rem;
+
+    &:hover {
+      color: variables.$amarillo;
+    }
+  }
+}
+

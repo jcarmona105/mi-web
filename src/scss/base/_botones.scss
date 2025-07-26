@@ -1,0 +1,23 @@
+@use '../base/variables' as variables;
+@use '../base/mixins' as mixins;
+
+.boton-amarillo{
+     @include mixins.boton(variables.$amarillo, inline-block);
+}
+
+.boton-amarillo-block{
+     @include mixins.boton(variables.$amarillo, block);
+}
+
+.boton-verde{
+    @include mixins.boton(variables.$verde, inline-block);
+}
+
+.boton-rojo-block{
+    @include mixins.boton(variables.$rojo, block);
+    width: 100%;
+}
+
+.boton-verde-block{
+    @include mixins.boton(variables.$verde, block);
+}

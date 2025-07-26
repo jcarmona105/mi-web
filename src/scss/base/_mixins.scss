@@ -1,0 +1,55 @@
+@use 'base/variables' as variables;
+@use 'sass:math';
+@use 'sass:color';
+
+
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: variables.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: variables.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: variables.$desktop) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin boton($bgcolor, $display: block) {
+  background-color: $bgcolor;
+  color: variables.$blanco;
+  font-weight: variables.$bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: math.div(variables.$separacion, 2);
+  display: $display;
+  border: none;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($bgcolor, $lightness: -10%);
+
+    cursor: pointer;
+  }
+}
+
+
+
+
+

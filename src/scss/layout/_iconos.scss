@@ -1,0 +1,26 @@
+@use '../base/variables' as variables;
+@use '../base/mixins' as mixins;
+
+.iconos-nosotros {
+  // Estilos base (por ejemplo, para mobile)
+  
+  @include mixins.grid(1, 2rem); // opcional: para mobile
+
+  @include mixins.tablet {
+    @include mixins.grid(3, 2rem);
+  }
+}
+
+
+.icono{
+    text-align: center;
+    img{
+        height: 10rem;
+
+    }
+
+    h3{
+        text-transform: uppercase;
+
+    }
+}
