@@ -1,0 +1,111 @@
+@use '../base/variables' as variables;
+@use '../base/mixins' as mixins;
+@use 'sass:color';
+
+.pago-servicio {
+    background: color.scale(variables.$gris, $lightness: 6%);
+    border-radius: 1.2rem;
+    padding: variables.$separacion;
+    display: grid;
+    gap: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+
+    @include mixins.tablet {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: start;
+    }
+}
+
+.pago-servicio__intro {
+    h2 {
+        margin: 0 0 1rem 0;
+        font-size: 3rem;
+        color: variables.$verde;
+    }
+
+    p {
+        font-size: 1.7rem;
+        line-height: 1.6;
+        color: variables.$gris-oscuro;
+    }
+}
+
+.pago-servicio__opciones {
+    display: grid;
+    gap: 1.5rem;
+
+    @include mixins.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.pago-servicio__opcion {
+    background-color: variables.$blanco;
+    border: 1px solid color.scale(variables.$gris, $lightness: 18%);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+
+    h3 {
+        margin-top: 0;
+        color: variables.$negro;
+        font-size: 2.2rem;
+    }
+
+    p {
+        color: variables.$gris-oscuro;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    ul {
+        padding-left: 1.6rem;
+        margin: 0;
+        display: grid;
+        gap: 0.6rem;
+
+        li {
+            color: variables.$gris-oscuro;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.pago-servicio__accion {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, color.scale(variables.$verde, $lightness: 10%), variables.$verde);
+    color: variables.$blanco;
+    border-radius: 1rem;
+    padding: 2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+
+    p {
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    .boton-verde {
+        background-color: variables.$blanco;
+        color: variables.$verde;
+        padding: 1rem 2.4rem;
+        border-radius: 0.8rem;
+        font-weight: variables.$bold;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+        &:hover {
+            background-color: color.scale(variables.$blanco, $lightness: -6%);
+        }
+    }
+}
+
+@include mixins.tablet {
+    .pago-servicio__accion {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
