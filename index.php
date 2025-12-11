@@ -67,6 +67,37 @@ incluirTemplate('header', $inicio = true);
 
     </section>
 
+    <section class="seccion contenedor pago-servicio">
+        <div class="pago-servicio__intro">
+            <h2>Pago seguro de tu servicio</h2>
+            <p>Completa tu solicitud y liquida el servicio sin fricciones. Mantén tus datos protegidos y recibe confirmación inmediata.</p>
+        </div>
+        <div class="pago-servicio__opciones">
+            <article class="pago-servicio__opcion">
+                <h3>Métodos de pago</h3>
+                <p>Aceptamos tarjetas de crédito, débito y transferencias para que elijas la opción que mejor se adapte a ti.</p>
+                <ul>
+                    <li>Visa, MasterCard y American Express</li>
+                    <li>Transferencia bancaria con referencia</li>
+                    <li>Pagos recurrentes para planes de mantenimiento</li>
+                </ul>
+            </article>
+            <article class="pago-servicio__opcion">
+                <h3>Transparencia y soporte</h3>
+                <p>Recibirás un comprobante digital y soporte personalizado para cualquier duda o ajuste en tu pago.</p>
+                <ul>
+                    <li>Resumen detallado antes de confirmar</li>
+                    <li>Factura electrónica disponible</li>
+                    <li>Asistencia por chat y teléfono</li>
+                </ul>
+            </article>
+        </div>
+        <div class="pago-servicio__accion">
+            <p>¿Listo para contratar? Gestiona el pago con nuestro equipo y asegura tu servicio hoy mismo.</p>
+            <a href="contacto.php" class="boton-verde">Solicitar enlace de pago</a>
+        </div>
+    </section>
+
     <div class="contenedor seccion seccion-inferior">
         <section class="blog">
             <h3>Nuestro Blog</h3>
